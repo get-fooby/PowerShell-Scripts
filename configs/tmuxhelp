@@ -1,0 +1,23 @@
+- Panes
+Control+b %     split | vertical
+Control+b "     split -- horizontal
+Control+b <-    move left
+Control+b ^     move up
+Control+b ->    move right
+Control+b \/    move down
+Control+d       close pane note d not b
+
+- Windows
+Control+b c  create new window
+Control+b n  next window
+Control+b p  previous window
+Control+b #  switch to specific number window
+Control+b d  detach from session
+Control+b D  detach choose
+Control+b ,  rename window
+
+- tmux main
+tmux ls                             show running sessions
+tmux attach -t 0                    attach to session 0
+tmux new -s database                create new session called database
+tmux rename-session -t 0 database   rename session 0 to database

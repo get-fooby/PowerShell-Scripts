@@ -1,3 +1,4 @@
+
 <#
 .Synopsis
    Parse Nmap XML to PSObject
@@ -14,6 +15,12 @@
  Updated by fooby
  http://graem.es
  http://github.com/get-fooby
+
+Original Note
+ I know that the proper PowerShell way is to output $null instead of
+ strings like "<no-os>" for properties with no data, but this actually
+ caused confusion with people new to PowerShell and makes the output
+ more digestible when exported to CSV and other formats.
 
 
  Original Version
@@ -227,32 +234,7 @@ function Parse-NmapXML
     
     
 #endregion scripts
-
-
-
-
-
-
-
-        #$HostName = $_.Hostname
-        #$FQDN = $_.FQDN
-        #$Status = $_.Status
-        #$IPv4 = $_.IPv4
-        #$IPv6 = $_.IPv6
-        #$MAC = $_.MAC
-        #$Services = $_.Services
-        #$OS = $_.OS
-        
-        #$Script = $_.Script
-        #$Ports = $_.Ports
-
-        #$Ports -split "\n" | ForEach-Object {
-
-        #$PortNumber = ($($_) -split ":")[2]
-        #$PortState = ($($_) -split ":")[0]
-        #$PortProtocol = ($($_) -split ":")[1]
-        #$PortName = ($($_) -split ":")[3]
-        
+      
 
         }#end foreach ports
 
